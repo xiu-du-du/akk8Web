@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            border: 10px solid red;
+
+            /* 
+                BFC（block formatting context） 块级格式化环境：
+                    - bfc是一个css中隐含属性，可以给元素开启bfc
+                        开启后，该元素变成一个独立的布局区域
+                    - 元素开启bfc后的特点：
+                        1、开启bfc的元素不会被浮动元素覆盖
+                        2、开启bfc的元素，子元素和父元素的外边距不会重叠
+                        3、开启bfc的元素可以包含浮动的子元素
+                    - 可以通过特殊方式开启bfc：
+                        1、设置元素浮动（有bug不推荐）
+                        2、将元素设置为行内块元素（有bug不推荐）
+                        3、将元素的overflow设置为非visible的值
+                                - 常用方式，
+                                    为元素设置 overflow：hidden 开启其bfc
+            */
+            /* float: left; */
+            /* display: inline-block; */
+            overflow: hidden;
+
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+            /* 
+                高度塌陷：
+                    在浮动中，父元素高度默认被子元素撑开的。
+                        当子元素浮动后，子元素会从文档流脱离，此时无法撑开父元素高度，导致父元素高度丢失。
+
+                    父元素高度丢失后，其下元素会自动上移，导致布局混乱。
+
+                    高度塌陷是浮动布局中常见问题，处理方法：
+
+            */
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

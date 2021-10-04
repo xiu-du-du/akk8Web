@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{
+            background-color: #eee;
+        }
+        a{
+            text-decoration: none;
+        }
+        .news-wrapper{
+            width: 300px;
+            height: 323px;
+            background-color: #fff;
+            margin: 50px 50px;
+            border-top: 1px solid #ddd;
+        }
+        .news-title{
+            height: 31px;
+            display: inline-block;
+            border-top: 1px solid red;
+            margin-top: -1px;
+            padding-top: 10px;
+        }
+        .news-title a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .news-img{
+            height: 150px;
+        }
+        .news-img .img-title{
+            margin-top: -30px;
+            color: white;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .news-img .img-title::before{
+            content: "“ ";
+            color: red;
+        }
+
+        .news-list{
+            margin-top: 16px;
+            /* padding-left: 14px; */
+
+        }
+        .news-list li{
+            margin-bottom: 10px;
+        }
+        .news-list li::before{
+            content: '■';
+            color: #ddd;
+            margin-right: 6px;
+        }
+        .news-list li a{
+            font-size: 12px;
+            color: #666;
+        }
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-wrapper">
+        <h2 class="news-title">
+            <a href="">体育</a>
+        </h2>
+
+        <div class="news-img">
+            <a href="">
+                <img src="img/03/1.webp" alt="">
+                <h3 class="img-title">范迪克晒自己与蜡像合照：太荣幸了</h3>
+            </a>
+        </div>
+
+        <ul class="news-list">
+            <li><a href="">被“伪神”篡位的女王，终于决定不忍了</a></li>
+            <li><a href="">奇迹！24岁还是全职送货员，30岁加盟了AC米</a></li>
+            <li><a href="">贾巴尔喷欧文"地平论混乱头脑"</a></li>
+            <li><a href="">王霜今年曾拒英超邀约 本人3字回应</a></li>
+        </ul>
+    </div>
+</body>
+</html>

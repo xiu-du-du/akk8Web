@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .imgList{
+            width: 190px;
+            height: 470px;
+            overflow: hidden;
+            margin: 50px auto;
+            background-color: #f4f4f4;
+        }
+        .imgList img{
+            width: 100%;
+        }
+        .imgList li:not(:last-child){
+            margin-bottom: 9px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 方式一： -->
+    <!-- <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div> -->
+
+    <ul class="imgList">
+        <li><a href=""><img src="img/01/1.png.webp" alt=""></a></li>
+        <li><a href=""><img src="img/01/2.jpg.webp" alt=""></a></li>
+        <li><a href=""><img src="img/01/3.jpg.webp" alt=""></a></li>
+    </ul>
+</body>
+</html>

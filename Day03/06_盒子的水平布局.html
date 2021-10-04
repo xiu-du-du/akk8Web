@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width:800px;
+            height: 200px;
+            border: 10px rgb(255,50,50) solid;
+        }
+        .inner{
+            width: 200px; 
+            height: 200px;
+            background-color: #bfa;
+
+            /* 
+                一个元素在其父元素中，水平布局必须要满足以下等式：
+                    margin-left + border-left + padding-left + width + padding-right + border-right + marigin-right = 其父元素内容区的宽度（必须满足）
+
+                    - 如果等式不成立，称为过渡约束，浏览器会自动调整。
+                        - 调整情况：
+                            - 如果这些值都没有 auto的情况，浏览器会自动调整margin-right的值使等式满足
+                            - 如果设置了某个值为 auto，则会调整这个auto的值使等式成立
+                           - width 的值，默认就是 auto 
+                           - 如果width和外边距都设置成auto，那么width会调整到最大，外边距的auto为0
+                           - 如果将两个外边距设为auto，宽度固定，则会将两个外边距设为相同值
+                                可以利用这个特点使一个元素在父元素中水平居中
+                                    示例：
+                                        margin：0 auto；
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

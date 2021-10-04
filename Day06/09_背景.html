@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+
+            /* 
+                background-image 背景图片设置
+                    可以同时设置背景图片和背景色
+                    如果背景图片小于元素，则背景图片会自动平铺铺满元素
+                    如果背景图片大于元素，则会有一部分无法被显示
+
+            */
+            background-image: url(../Day01/img/1.gif);
+
+            /*
+                background-repeat
+                    设置背景的重复方式
+                        repeat 默认值 背景会沿着x轴和y轴双方向重复
+                        repeat-x 沿着x轴重复
+                        repeat-y 沿着y轴重复
+                        no-repeat 不重复
+            */
+
+            background-repeat: no-repeat;
+
+
+
+            /* 
+                background-position
+                    设置图片位置
+                        通过top left right bottom center 方位词来设置
+                        使用时，必须要同时指定两个值，如果只写一个值，第二个自动默认为center
+                    
+                        通过偏移量设置
+                            水平方向
+                            垂直方向
+            */
+            /* background-position: center center; */
+            background-position: -300px 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

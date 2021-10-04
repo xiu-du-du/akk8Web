@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+
+        /* 
+            
+            给父元素中的子元素设置margin-top后，父元素的margin-top也发生了改变的问题。
+            解决方式：
+                使用::before在父元素前增加一个伪元素，
+                然后给伪元素设置display:table可以完美解决问题
+                table既可以解决重叠也可以解决高度塌陷
+                
+                注意：
+                    display其他的值会导致子元素溢出
+        */
+        /* .box1::before{
+            content: '';
+            display: table;
+        } */
+
+        /* 
+            .clearfix 样式可以同时解决高度塌陷和外边距重叠的问题，如果遇到这类问题，直接使用.clearfix即可
+        */
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

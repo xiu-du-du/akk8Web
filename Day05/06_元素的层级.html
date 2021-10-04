@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+                z-index 
+                    可以调整元素的层级
+                    值越大，层级越高
+                    如果层级一样，优先显示靠下的元素
+
+                    祖先元素的层级再高，也不会盖住后代元素
+            */
+            position: absolute;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* position: relative;
+            bottom: 200px;
+            left: 200px; */
+            position: absolute;
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

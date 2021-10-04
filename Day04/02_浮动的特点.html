@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            /* 
+                浮动元素不会盖住文字，文字会自动环绕在浮动元素周围.
+
+            */
+            float: left;
+        }
+        .box2{
+
+            background-color: #bfa;
+            /* 
+               元素浮动以后，会脱离文档流，导致元素一些特点发生改变。
+
+                脱离文档流以后
+                    块元素
+                        - 块元素不在独占一行
+                        - 脱离文档流以后，块元素的高度和宽度默认都被内容撑开
+                    行内元素
+                        脱离文档流后和块元素一样
+                
+                    总结：
+                        脱离文档流后不需要总结块元素和行内元素
+
+            */
+            float: left;
+        }
+        .box3{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box2">123</div>
+    <div class="box3">123</div>
+    <!-- <div class="box1"></div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ex fugit, et quaerat eius praesentium inventore recusandae asperiores earum assumenda nihil minima necessitatibus dolorem provident quas obcaecati nemo aliquam tenetur.</p> -->
+</body>
+</html>

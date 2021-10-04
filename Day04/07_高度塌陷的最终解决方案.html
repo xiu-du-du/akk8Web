@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 10px solid red;
+
+            /* overflow: hidden; */
+        }
+        .box2{
+            width: 100px;
+            height: 300px;
+            background-color: #bfa;
+            float: left;
+        }
+
+        /* 
+            html方式：
+            可以通过在浮动元素下面增加兄弟元素，给兄弟元素添加clear:both解决塌陷问题。
+                    这种办法为html的方式，在css中，最好用css方式解决。
+            
+
+            css方式：
+            使用::after在可以在浮动的元素后增加伪元素，这个伪元素是浮动元素的兄弟元素，
+                并且这个伪元素默认是行内元素，因此直接增加clear:both是无效果的，
+                要先display:block将其转成块元素，
+                然后给伪元素设置clear:both同样可以完美解决塌陷问题。
+
+        */
+        .box1::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+</html>
