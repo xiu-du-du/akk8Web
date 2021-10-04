@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            /* 
+                渐变可以设置复杂的背景色
+
+                渐变可以实现颜色过渡的效果
+
+                线性渐变
+                    linear-gradient（）
+                    参数：
+                        指定方向
+                            to left
+                            to right
+                            to top
+                            to bottom
+                            deg 表示度数
+                            turn 表示圈
+                       颜色
+                       渐变可以指定多种颜色
+                       渐变可以指定分布情况
+                    repeating-linear-gradient()
+                        平铺的线性渐变
+
+            */
+            /* background-image: linear-gradient(to left, orange 10px ,pink 10px,purple ,green 50px ); */
+
+
+            background-image: repeating-linear-gradient(to left, orange  ,pink ,purple ,green  50px);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box1"></div>
 </body>
 </html>
