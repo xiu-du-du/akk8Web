@@ -67,6 +67,7 @@
     height: 0;
     /* transition 设置过渡效果 */
     transition: height .3s;
+    z-index: 9999;
 
 }
 .app .qrcode img{
@@ -90,6 +91,7 @@
     width: 120px;
     background-color: #424242;
     text-align: center;
+    position: relative;
 }
 .shop-cart:hover a{
     background-color: #fff;
@@ -102,13 +104,15 @@
     width: 316px;
     background-color: #fff;
     box-shadow: 0px 5px 10px  rgba(0 , 0, 0, .2);
-    float: right;
     text-align: center;
     line-height: 80px;
     color: rgb(66,66,66);
     overflow: hidden;
     height: 0;
     transition: height .3s;
+    position: absolute;
+    left: -196px;
+    z-index: 999;
 }
 .shop-cart:hover .shop-info{
     height:80px ;
@@ -117,6 +121,9 @@
 /* 顶部内容区 */
 .header{
     height: 100px;
+}
+.header-wrapper{
+    position: relative;
 }
 /* 设置logo样式 */
 .logo{
@@ -151,5 +158,101 @@
 }
 .logo:hover .home{
     left: 0;
+}
+
+/* 设置导航条 */
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+
+}
+.header .nav{
+    /* height: 100px; */
+    line-height: 100px;
+    padding-left: 58px;
+
+}
+.nav-wrapper li{
+    float: left;
+}
+.nav-wrapper li a{
+    font-size: 16px;
+    margin-right: 20px;
+    display: block;
+}
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+/* 隐藏第一个 */
+.all-goods{
+    /* 隐藏后依然占据位置 */
+    visibility: hidden;
+}
+
+/* 下拉框 */
+.nav .goods-info{
+    /* height: 228px; */
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition:height 0.3s ;
+    z-index: 999;
+}
+.nav li:hover:not(:first-of-type):not(:last-of-type):not(:nth-child(9)) ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    border-top:1px solid rgb(224, 224, 224);
+}
+
+
+
+/* 搜索框 */
+.search-wrapper{
+    width: 296px;
+    height:  50px;
+    float: right;
+    margin-top: 25px;
+}
+.search-wrapper .search-inp{
+    border: none;
+    float: left;
+    padding: 0;
+    width: 244px;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    outline: none;
+
+}
+/* 设置input获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus+.search-btn{
+    border-color: #ff6700;
+}
+.search-wrapper .search-btn{
+    float: left;
+    height: 50px;
+    width: 52px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+}
+
+
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: white;
+    cursor: pointer;
 }
 
