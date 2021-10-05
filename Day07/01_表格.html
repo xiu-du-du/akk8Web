@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        使用表格表示格式化数据：
+            课程表、名册、成绩表...
+            
+        在网页中通过table创建表格
+     -->
+
+     <table border="1" width="20%" align="center">
+        <thead>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </thead>
+         <!-- 使用tr表示行 有几个tr就是几行-->
+         <tr>
+             <!-- 使用td表示行中单元格 -->
+             <td>A1</td>
+             <td>B1</td>
+             <td>C1</td>
+             <td>D1</td>
+         </tr>
+
+         <tr>
+             <td>A2</td>
+             <td>B2</td>
+             <td>C2</td>
+
+            <!-- 
+                    rowspan 纵向合并单元格
+             -->
+             <td rowspan="2">D2</td>
+         </tr>
+
+         <tr>
+             <td>A3</td>
+             <td>B3</td>
+             <td>C3</td>
+             <td>D3</td>
+         </tr>
+
+         <tr>
+            <td>A4</td>
+            <td>B4</td>
+
+            <!-- 
+                    colspan 横向合并单元格
+             -->
+            <td colspan="2">C4</td>
+            <td>D4</td>
+        </tr>
+     </table>
+</body>
+</html>
