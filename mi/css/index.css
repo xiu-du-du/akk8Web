@@ -34,7 +34,7 @@
     position: relative;
 }
 /* 设置app下的三角 */
-.app-wrapper:hover .app::after{
+.app::after{
     content: '';
     position: absolute;
     width: 0;
@@ -46,21 +46,28 @@
     left: 0;
     right: 0;
     margin: auto;
+    display: none;
 }
-.app-wrapper:hover .app .qrcode{
+.app:hover .qrcode,
+.app:hover::after{
     display: block;
+    height: 148px;
 }
 /* 设置app二维码 */
 .app .qrcode{
     width: 124px;
-    height: 148px;
     background-color: #fff;
     text-align: center;
     line-height: 1;
     box-shadow:0 0 10px rgba(0, 0, 0, .3);
     position: absolute;
     left: -40px;
-    display: none;
+    /* display: none; */
+    overflow: hidden;
+    height: 0;
+    /* transition 设置过渡效果 */
+    transition: height .3s;
+
 }
 .app .qrcode img{
     width: 90px;
@@ -91,3 +98,20 @@
 .shop-cart i{
     margin-right: 2px;
 }
+.shop-info{
+    width: 316px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px  rgba(0 , 0, 0, .2);
+    float: right;
+    text-align: center;
+    line-height: 80px;
+    color: rgb(66,66,66);
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+}
+.shop-cart:hover .shop-info{
+    height:80px ;
+}
+
+
