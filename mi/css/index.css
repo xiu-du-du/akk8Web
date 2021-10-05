@@ -1,0 +1,93 @@
+/* 主页样式 */
+
+/* 顶部导航 */
+.top-bar-wrapper{
+    /* 设置宽度 */
+    width: 100%;
+    /* 设置高度，行高 */
+    line-height: 40px;
+    height: 40px;
+    /* 设置背景色 */
+    background-color: #333;
+}
+/* 设置超链接文字颜色 */
+.top-bar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+/* 设置超链接hover效果 */
+.top-bar a:hover{
+    color: #fff;
+}
+/* 设置分割线 */
+.top-bar .line{
+    color:#424242;
+    margin: 0 8px;
+    margin-top: -1px;
+}
+/* 左侧导航 */
+.service,.top-bar-wrapper li{
+    float: left;
+}
+.app{
+    position: relative;
+}
+/* 设置app下的三角 */
+.app-wrapper:hover .app::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;    
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.app-wrapper:hover .app .qrcode{
+    display: block;
+}
+/* 设置app二维码 */
+.app .qrcode{
+    width: 124px;
+    height: 148px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 1;
+    box-shadow:0 0 10px rgba(0, 0, 0, .3);
+    position: absolute;
+    left: -40px;
+    display: none;
+}
+.app .qrcode img{
+    width: 90px;
+    margin:17px;
+    margin-bottom: 10px;
+}
+.app .qrcode span{
+    color: #000;
+    font-size: 14px;
+}
+/* 设置右侧导航 */
+.shop-cart,.user-info{
+    float: right;
+}
+/* 设置购物车 */
+.shop-cart{
+    margin-left: 26px;
+}
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+.shop-cart:hover a{
+    background-color: #fff;
+    color: #ff6700;
+}
+.shop-cart i{
+    margin-right: 2px;
+}
