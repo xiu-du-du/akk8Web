@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%;
+            /* border:1px red solid; */
+            /* 
+                设置边框之间的距离
+            */
+            /* border-spacing: 0; */
+
+            /* 设置边框合并 */
+            border-collapse: collapse;
+        }
+
+
+        /* 
+            如果表格没写tbody直接写tr，
+            浏览器会自动创建tbody，然后把tr都放到tbody里，
+            tr不是table的子元素。
+
+        */
+        tbody>tr:nth-child(odd){
+            background-color: #bfa;
+        }
+        td{
+            border: 1px black solid;
+            /* 
+                元素在td里默认垂直居中的，使用vertical-align可以进行调整
+
+                使用display:table-cell 可以讲元素设置为单元格，
+                    设置成单元格之后就可以使用vertical-align属性
+            
+            */
+
+            vertical-align: middle;
+
+            height: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+    </table>
+</body>
+</html>
