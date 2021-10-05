@@ -77,7 +77,7 @@
     </div>
 
     <!-- 顶部内容导航-外部容器 -->
-    <div class="header-wrapper">
+    <div class="header-wrapper clearfix">
         <div class="header w clearfix">
             <!-- logo -->
             <h1 class="logo">
@@ -89,7 +89,76 @@
             <!-- 创建导航条 -->
             <div class="nav-wrapper">
                 <ul class="nav clearfix">
-                    <li><a class="all-goods" href="#">全部商品分类</a></li>
+                    <li class="all-goods-wrapper">
+                        <a class="all-goods" href="#">全部商品分类</a>
+                        <!-- 左侧导航 -->
+                        <ul class="left-menu">
+                            <li>
+                                <a href="javascript:;">
+                                    手机 电话卡
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    电视 盒子
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    笔记本 平板
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    家电 插线板
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    出行 穿戴
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    智能 路由器
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    电源 配件
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    健康 儿童
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    耳机 音箱
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    生活 箱包
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <!-- 弹出框 -->
+                            <div class="left-menu-info">
+
+                            </div>
+                        </ul>
+                    </li>
                     <li><a href="#">小米手机</a></li>
                     <li><a href="#">Readmi 红米</a></li>
                     <li><a href="#">电视</a></li>
@@ -108,7 +177,7 @@
             </div>
 
             <!-- 右侧搜索框 -->
-            <div class="search-wrapper">
+            <div class="search-wrapper ">
                 <form action="#" class="search">
                     <input type="text" class="search-inp">
                     <button class="search-btn">
@@ -118,5 +187,45 @@
             </div>
         </div>
     </div>
+
+    <!-- 创建banner容器 -->
+    <div class="banner-wrapper">
+        <div class="banner w clearfix">
+            <ul class="img-list">
+                <li>
+                    <a href="javascript:;">
+                        <img src="./img/1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./img/2.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./img/3.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a  href="javascript:;">
+                        <img src="./img/4.webp" alt="">
+                    </a>
+                </li>
+                <!-- 圆形切换符号 -->
+                <div class="pointer">
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a class="active" href="javascript:;"></a>
+                </div>
+                <div class="prev-next">
+                    <a class="prev" href="javascript:;"></a>
+                    <a class="next" href="javascript:;"></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>

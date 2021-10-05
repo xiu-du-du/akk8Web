@@ -121,6 +121,7 @@
 /* 顶部内容区 */
 .header{
     height: 100px;
+    /* position: relative; */
 }
 .header-wrapper{
     position: relative;
@@ -163,18 +164,69 @@
 /* 设置导航条 */
 .header .nav-wrapper{
     float: left;
-    margin-left: 7px;
-
+    margin-left: 90px;
 }
 .header .nav{
-    /* height: 100px; */
+    height: 100px;
     line-height: 100px;
-    padding-left: 58px;
-
+    /* padding-left: 58px; */
 }
-.nav-wrapper li{
+.nav> li{
     float: left;
 }
+.all-goods-wrapper{
+    position: relative;
+    width: 142px;
+    height: 100px;
+}
+/* 设置左侧导航 */
+.left-menu{
+    height: 420px;
+    width: 234px;
+    background-color: rgba(0,0 ,0 ,.5);
+    position: absolute;
+    z-index: 99;
+    left: -146px;
+    line-height: 1;
+    padding: 20px 0;
+    position: relative;
+}
+ul.left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    margin-right: 0;
+    padding: 0 30px;
+    font-size: 14px;
+}
+ul.left-menu li a:hover{
+    color: white;
+    background-color: #ff6700;
+}
+.left-menu a i{
+    float: right;
+    line-height: 42px;
+}
+/* 弹出框 */
+.left-menu-info{
+    width: 993px;
+    height: 460px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    border: 1px rgb(224, 224, 224) solid;
+    border-left: none;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    display: none;
+}
+.left-menu li:hover ~ .left-menu-info{
+    display: block;
+}
+
+
 .nav-wrapper li a{
     font-size: 16px;
     margin-right: 20px;
@@ -187,19 +239,19 @@
 .all-goods{
     /* 隐藏后依然占据位置 */
     visibility: hidden;
+    
 }
 
 /* 下拉框 */
 .nav .goods-info{
     /* height: 228px; */
     height: 0;
+    overflow: hidden;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-
     position: absolute;
     top: 100px;
-    left: 0;
+    left: 0px;
     transition:height 0.3s ;
     z-index: 999;
 }
@@ -207,6 +259,7 @@
 .goods-info:hover{
     height: 228px;
     border-top:1px solid rgb(224, 224, 224);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
 }
 
 
@@ -215,8 +268,10 @@
 .search-wrapper{
     width: 296px;
     height:  50px;
-    float: right;
     margin-top: 25px;
+    /* float: right; */
+    position: absolute;
+    left: 1126px;
 }
 .search-wrapper .search-inp{
     border: none;
@@ -248,11 +303,69 @@
     border: 1px solid rgb(224, 224, 224);
     border-left: none;
 }
-
-
 .search-wrapper .search-btn:hover{
     background-color: #ff6700;
     color: white;
     cursor: pointer;
 }
+
+/* banner */
+.banner{
+    position: relative;
+    height: 460px;
+}
+.img-list li{
+    position: absolute;
+}
+.img-list img{
+    height: 460px;
+}
+/* 设置切换符号 */
+.pointer{
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+.pointer a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color:rgb(0,0,0,.4) ;
+    border:3px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    margin-left:8px ;
+}
+.pointer a:hover,
+.pointer a.active{
+    border:3px solid rgb(0,0,0,.4) ;
+    background-color: rgba(255, 255, 255, .8);
+
+}
+/* 设置翻页箭头 */
+.prev-next a{
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    /* background-color: red; */
+    background-image: url(../img/icon-slides.png);
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+}
+.prev-next .prev{
+    left: 233px;
+    background-position: -84px;
+}
+.prev-next .prev:hover{
+    background-position: 0;
+}
+.prev-next .next{
+    right: 0;
+    background-position: -125px;
+}
+.prev-next .next:hover{
+    background-position: -42px;
+}
+
 
