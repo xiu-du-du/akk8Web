@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* 设置网页视距为500px,人眼离网页的距离 */
+            perspective: 500px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 100px auto;
+
+            /* 
+                z轴平移，调整人眼之间的距离
+                距离越大，离人眼越近
+
+                z轴平移属于立体效果，近大远小
+                默认情况下不支持透视，如果想看见效果必须设置网页的视距
+            */
+            transition: 2s;
+        }
+
+        .box1:hover{
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
