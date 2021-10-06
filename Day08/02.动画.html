@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: silver;
+        }
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            margin-left: 0px;
+        }
+        
+        /* .box1:hover .box2{
+            margin-left: 700px;
+        } */
+
+        .box2{
+            background-color: #bfa;
+
+            /* 设置动画 */
+            /* 对当前元素设置关键帧 */
+            animation-name: testName;
+            
+            /* 动画执行时间 */
+            animation-duration: 4s;
+            
+            /* 设置动画延迟 */
+            /* animation-delay: 2s; */
+
+            /* 设置动画时序函数 */
+            /* animation-timing-function: steps(3); */
+
+            /* 动画执行的次数 infinite无限循环执行 */
+            /* animation-iteration-count: infinite; */
+
+            /* 指定动画运行的方向
+                normal 默认，从form到to执行
+                reverse 反向执行
+                alternate 一来一回    
+                alternate-reverse 反向一来一回
+            */
+            /* animation-direction: normal; */
+
+            /* 设置动画执行状态
+                可选值
+                    running 默认值，动画执行
+                    paused 动画暂停
+            */
+            /* animation-play-state: paused; */
+
+            /* 动画填充模式
+                none 默认值，执行完毕后回到原点
+                forwards 执行完毕后停在结束的位置
+                backwords 动画延迟等待时，元素就会处于开始位置
+                both 结合了forwards和和backwords
+            */
+            /* animation-fill-mode: none; */
+
+            /* animation: test 2s 2 1s alternate; */
+        }
+
+        /* 
+            动画
+                动画和过渡类似
+                    不同的地方时过渡需要某个属性发生变化才会触发
+                    动画可以自动触发
+                设置动画，需要设置关键帧
+                    关键帧设置了动画执行的每个步骤
+        */
+        @keyframes testName {
+            0%{
+                /* 动画的开始位置 可以使用from或者0%表示 */
+                margin-left: 0;
+            }
+
+            to{
+                /* 动画的结束为止 可以使用to表示结束 */
+                margin-left: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
