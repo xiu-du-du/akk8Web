@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-image: url(./img/12/trump_run.png);
+            margin: 0 auto;
+            /* transition: 400ms steps(3); */
+            animation-name: onerun;
+            animation-name: tworun;
+            animation-iteration-count: infinite;
+            animation-duration: 500ms;
+            animation-timing-function: steps(6);
+        }
+        @keyframes onerun {
+            0%{
+                background-position: 0 0;
+            }
+
+            to{
+                background-position: -600px 0;
+            
+            }
+        }
+
+        @keyframes tworun {
+            0%{
+                background-position: 0 100px;
+            }
+
+            to{
+                background-position: -600px 100px;
+            
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        
+    </div>
+</body>
+</html>
