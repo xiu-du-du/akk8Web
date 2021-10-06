@@ -14,7 +14,8 @@
             /* transition: 400ms steps(3); */
             animation-name: testName;
             animation-iteration-count: infinite;
-            animation-duration: 1s;
+            animation-duration: 500ms;
+            animation-timing-function: steps(4);
         }
         @keyframes testName {
             0%{
@@ -22,8 +23,10 @@
             }
 
             to{
-                background-position: -396px 0;
+                background-position: -528px 0;
+            
             }
+        }
     </style>
 </head>
 <body>
