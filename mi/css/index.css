@@ -269,9 +269,7 @@ ul.left-menu li a:hover{
     width: 296px;
     height:  50px;
     margin-top: 25px;
-    /* float: right; */
-    position: absolute;
-    left: 1126px;
+    float: right;
 }
 .search-wrapper .search-inp{
     border: none;
@@ -368,4 +366,92 @@ ul.left-menu li a:hover{
     background-position: -42px;
 }
 
+/* 右侧菜单栏 */
+.backtop{
+    width: 26px;
+    height: 206px;
+    position: fixed;
+    bottom:45px;
+    right: 50%;
+    margin-right: -642px;
+    border: 1px solid rgb(245,245,245);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+.backtop img{
+    width: 100%;
+}
 
+/* 设置底部广告 */
+.ad{
+    height: 170px;
+    margin-top: 14px;
+}
+.ad .shortcurt,
+.ad .imgs,
+.ad li{
+    float: left;
+}
+/* 设置左侧 */
+.ad .shortcurt{
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    margin-right: 14px;
+}
+.ad .shortcurt li{
+    position: relative;
+}
+.ad .shortcurt li::before{
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: rgb(102,94,85);
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+}
+.ad .shortcurt li::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 70px;
+    background-color: rgb(102,94,85);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.ad .imgs li{
+    width: 316px;
+    margin-right:15px; 
+
+}
+.ad .imgs li:last-child{
+    margin-right: 0;
+}
+.ad .imgs img{
+    width: 100%;
+    vertical-align: top;
+}
+/* 设置超链接 */
+.ad .shortcurt a{
+    display: block;
+    color: rgb(170, 170, 170);
+    height: 84px;
+    width: 76px;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    
+}
+.ad .shortcurt a:hover{
+    color: #fff;
+}
+.ad .shortcurt i{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
