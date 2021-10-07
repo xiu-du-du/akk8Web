@@ -1,0 +1,39 @@
+.box1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+.box1 .box2 {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+}
+.box1 > .box3 {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+}
+.box1:hover {
+  background-color: red;
+}
+div.box1 {
+  background-color: yellow;
+}
+.p1,
+.p2 {
+  width: 100px;
+  height: 200px;
+}
+.p2 {
+  color: red;
+}
+.p3 {
+  width: 100px;
+  height: 200px;
+}
+.p5 {
+  font-size: 18px;
+  color: #999;
+  width: 100px;
+  height: 200px;
+}

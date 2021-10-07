@@ -1,0 +1,10 @@
+/*
+    css的注释，会被解析到css中
+*/
+.box4 {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  background-image: url("../../Day08/an.jpg");
+  background-size: cover;
+}

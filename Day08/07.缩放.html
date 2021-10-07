@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            overflow: hidden;
+            */
+            width: 200px;
+            height: 200px;
+            border: 1px red solid;
+            overflow: hidden;
+
+            /* 更改变形的原点，默认center */
+            /* transform-origin: 20px 20px; */
+        }
+
+        .box1:hover img{
+            /* 
+                对元素进行缩放
+                scaleX() x轴放大
+                scaleY() y轴放大
+                scale()  x轴和y轴同时放大
+            */
+            transform:scale(1.2);
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+        <div class="box1">
+            <img src="an.jpg" width=100%; alt="">
+        </div>
+    
+</body>
+</html>

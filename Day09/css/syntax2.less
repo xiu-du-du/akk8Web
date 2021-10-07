@@ -1,0 +1,56 @@
+.box1{
+    width: 100px;
+    height: $width;
+    border: 1px solid red;
+    .box2{
+        width: 30px;
+        height: $width;
+        background-color: green;
+    }
+    >.box3{
+        width: 30px;
+        height: $width;
+        background-color: blue;
+    }
+    // 为box1设置hover
+    // & 表示外层的父元素
+    &:hover{
+        background-color: red;
+    }
+    div&{
+        background-color: yellow;
+    }
+}
+.p1{
+    width: 100px;
+    height: 200px;
+}
+// :extend() 对当前选择器扩展指定选择器的样式（选择器分组）
+.p2:extend(.p1){
+    color: red;
+}
+.p3{
+    // 直接引用其他元素的样式
+    // mixin 混合
+    .p1();
+}
+
+// 使用类选择器时，在后面加一个小括号，就会创建一个mixins混合
+// 混合函数
+// 在混合函数中，可以直接设置变量传参
+.p4(@w:100px,@h:100px,@f-color:red){
+    font-size: 18px;
+    color: @f-color;
+    width: @w;
+    height: @h;
+}
+
+.p5{
+    // 调用混合函数时，必须按顺序传递参数
+    // .p4(200px,100px);
+    // 可以使用 属性值:传参
+    .p4(@w:100px,@h:200px,@f-color:#999);
+}
+
+// 更多功能强大函数看文档！
+

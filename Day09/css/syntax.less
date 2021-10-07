@@ -1,0 +1,43 @@
+// less的单行注释
+/*
+    css的注释，会被解析到css中
+*/
+
+// 变量
+// 变量可以储存任意一个值
+// 变量语法：@变量名
+// 变量发生重名时，使用比较近的变量
+// 变量作为类名时，要用大括号包起来
+
+@name:100px;
+@color:#bfa;
+@a:"../../Day08/an.jpg";
+@b:box4;
+
+// .box1{
+//     width: @name;
+//     height: 100px;
+//     background-color: @color;
+//     .box2{
+//         background-color: red;
+//         .box3{
+//             width: calc(@name/2);
+//             height: 50px;
+//             background-color: orange;
+            
+//         }
+//     }
+    
+// }
+// 变量作为类名
+.@{b}{
+    border: 1px solid red;
+
+    width: 100px;
+    // 使用 $属性名 将属性作为变量名
+    height: $width;
+
+    // 变量作为字符串
+    background-image: url("@{a}");
+    background-size: cover;
+}
