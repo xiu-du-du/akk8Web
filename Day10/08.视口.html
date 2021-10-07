@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 375vw;
+            height: 100px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+
+        不同的设备完美视口的大小不一样
+
+        iphone6 完美视口 375
+        iphone6plus 完美视口 414
+
+
+        由于不同设备视口和像素比不同，所以同样的375像素在不同设备下意义也不同
+
+        移动端开发时，就不能使用px进行布局了
+        vw 表示视口的宽度（viewport width）
+            1vw=1视口宽度
+            1vw=1%视口宽度
+            vw 永远对于视口宽度进行计算
+        
+     -->
+     <div class="box1">
+         <div class="box2">
+             <div class="box3"></div>
+         </div>
+     </div>
+</body>
+</html>
