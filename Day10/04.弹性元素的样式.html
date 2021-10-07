@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 900px;
+            border: 10px solid red;
+            display: flex;
+            flex-direction: row;
+        }
+        li{
+            width: 200px;
+            height: 100px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+            list-style: none;
+            line-height: 100px;
+
+            /* 弹性的增长系数 */
+            /* flex-grow:1; */
+
+            /* 弹性的缩减系数，缩减多少是根据缩减系数和元素大小来计算 */
+            /* flex-shrink: 1; */
+
+            /* 
+                flex-basis  指定元素在主轴上的基础长度
+                    如果主轴是横向的，则该指定的是元素的宽度
+                    如果主轴是纵向的，则该指定的是元素的高度
+
+                    auto    默认值，表示参考元素自身的高度
+                    如果传递了具体的数值，则以该值为准
+            */
+            /* flex-basis: 10px; */
+
+            /* 
+                flex    可以设置弹性元素所有的三个样式
+                    flex：增长 减少 基础长度
+                    initial 相当于"flex: 0 1 auto;"
+                    auto    相当于"flex: 1 1 auto;"
+                    none    相当于"flex: 0 0 auto;"
+            */
+            flex: initial;
+        }
+        li:nth-child(2){
+            background-color: pink;
+            /* flex-grow:2; */
+
+            /* order 决定元素的排列顺序 */
+            order: 1;
+        }
+        li:nth-child(3){
+            background-color: orange;
+            /* flex-grow:3; */
+            order: 4;
+        }
+        li:nth-child(4){
+            background-color: palevioletred;
+            /* flex-shrink: 4; */
+            order: 3;
+        }
+        li:nth-child(5){
+            background-color: orange;
+            /* flex-shrink: 1; */
+            order:2;
+        }
+    </style>
+</head>
+<body>
+
+     <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+     </ul>
+</body>
+</html>
